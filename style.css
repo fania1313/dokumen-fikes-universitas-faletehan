@@ -1,0 +1,429 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.header .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+.btn-upload-header {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+    font-size: 0.95rem;
+}
+
+.btn-upload-header:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-upload-header:active {
+    transform: translateY(0);
+}
+
+/* Main Content */
+main {
+    padding: 40px 0;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 60px;
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #1e3c72;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #2a5298;
+    display: inline-block;
+}
+
+.program-title {
+    font-size: 1.3rem;
+    color: #2a5298;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 4px solid #1e3c72;
+    font-weight: 600;
+}
+
+/* Category Grid */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    /* make the cards slightly narrower on tablets */
+    .category-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Document Cards */
+.doc-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid #2a5298;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.doc-card:hover {
+    box-shadow: 0 6px 20px rgba(30, 60, 114, 0.2);
+    transform: translateY(-5px);
+    border-left-color: #1e3c72;
+}
+
+.doc-card h3 {
+    color: #1e3c72;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.doc-card p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #1e3c72 0%, #0f2649 100%);
+    box-shadow: 0 4px 12px rgba(30, 60, 114, 0.3);
+    transform: translateX(2px);
+}
+
+.btn:active {
+    transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    .btn {
+        padding: 14px 28px;
+        min-height: 48px;
+        font-size: 1rem;
+    }
+}
+
+/* Pedoman Dropdown */
+.pedoman-dropdown {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #2a5298;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    color: #333;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    min-height: 44px;
+}
+
+.pedoman-dropdown:hover {
+    border-color: #1e3c72;
+    box-shadow: 0 2px 8px rgba(30, 60, 114, 0.1);
+}
+
+.pedoman-dropdown:focus {
+    outline: none;
+    border-color: #1e3c72;
+    box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
+}
+
+.pedoman-dropdown option {
+    padding: 10px;
+    color: #333;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .pedoman-dropdown {
+        padding: 14px 15px;
+        min-height: 48px;
+        font-size: 1rem;
+    }
+}
+
+/* Footer */
+.footer {
+    background: #1e3c72;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+.footer small {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header .subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .doc-card {
+        padding: 20px;
+    }
+
+    .doc-card h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 40px 15px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .header .subtitle {
+        font-size: 0.9rem;
+        margin-top: 8px;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        word-break: break-word;
+    }
+
+    .program-title {
+        font-size: 1.1rem;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    main {
+        padding: 15px 0;
+    }
+
+    .section {
+        margin-bottom: 30px;
+    }
+
+    .doc-card {
+        padding: 15px;
+    }
+
+    .doc-card h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .doc-card p {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+
+    /* make cards flat and minimal on phones */
+    .doc-card {
+        box-shadow: none;
+        border-left: none;
+        border-radius: 5px;
+        background-color: #fafafa;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .footer {
+        padding: 20px 15px;
+        margin-top: 40px;
+    }
+
+    .footer p {
+        margin: 4px 0;
+        font-size: 0.85rem;
+    }
+}
+
+/* extra adjustments for very small phones */
+@media (max-width: 360px) {
+    .category-grid {
+        gap: 10px;
+    }
+
+    .doc-card {
+        padding: 10px;
+    }
+
+    .doc-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .doc-card p {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+    }
+
+    .btn, .btn-upload-header {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+        min-height: 40px;
+    }
+
+    .header h1 {
+        font-size: 1.3rem;
+    }
+
+    .header .subtitle {
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+}
+
+/* Accessibility */
+a:focus,
+button:focus {
+    outline: 2px solid #2a5298;
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .header {
+        background: white;
+        color: #333;
+        border-bottom: 2px solid #1e3c72;
+    }
+
+    .btn {
+        color: #1e3c72;
+        border: 1px solid #1e3c72;
+        background: white;
+    }
+
+    .doc-card {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
