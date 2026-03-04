@@ -61,16 +61,18 @@ body {
 
 @media (max-width: 480px) {
     .header-logo {
-        max-width: 60px;
+        max-width: 50px;
     }
     /* keep header-content horizontal on phones and maintain gap */
     .header-content {
-        gap: 15px;
-        transform: scale(0.85);
+        gap: 12px;
+        transform: scale(0.7);
         transform-origin: center center;
+        flex-wrap: nowrap;
     }
     .header h1 {
-        font-size: 0.8rem; /* smaller to fit without breaking words */
+        font-size: 0.6rem; /* really tiny to force three lines */
+        line-height: 1.1;
     }
     .header-content h1 {
         flex: 1 1 auto; /* allow text to shrink */
