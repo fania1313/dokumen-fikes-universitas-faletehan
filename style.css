@@ -36,13 +36,16 @@ body {
     margin-bottom: 10px;
     font-weight: 700;
     letter-spacing: 0.5px;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    white-space: pre-line; /* respect line breaks */
 }
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 15px; /* keep previous spacing */
 }
 
 .header-content h1 {
@@ -60,12 +63,12 @@ body {
     .header-logo {
         max-width: 80px;
     }
-    /* keep header-content horizontal on phones */
+    /* keep header-content horizontal on phones and maintain gap */
     .header-content {
-        gap: 8px;
+        gap: 15px;
     }
     .header h1 {
-        font-size: 1.2rem;
+        font-size: 0.9rem; /* smaller to fit without breaking words */
     }
     .header-content h1 {
         flex: 1 1 auto; /* allow text to shrink */
