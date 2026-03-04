@@ -45,6 +45,11 @@ body {
     gap: 15px;
 }
 
+.header-content h1 {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
 .header-logo {
     display: block;
     max-width: 120px;
@@ -326,8 +331,12 @@ main {
     }
 
     .header h1 {
-        font-size: 1.5rem;
-        line-height: 1.3;
+        font-size: 1rem; /* smaller to ensure fitting */
+        line-height: 1.2;
+    }
+
+    .header-content {
+        gap: 5px; /* tighten space next to logo */
     }
 
     .header .subtitle {
