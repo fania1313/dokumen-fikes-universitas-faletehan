@@ -32,7 +32,7 @@ body {
 }
 
 .header h1 {
-    font-size: 2rem;
+    font-size: 2.4rem; /* slightly larger */
     margin-bottom: 10px;
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -43,32 +43,43 @@ body {
 
 .header-content {
     display: flex;
+    flex-direction: column; /* stack elements vertically */
     align-items: center;
     justify-content: center;
     gap: 15px; /* keep previous spacing */
 }
 
+/* enforce title-first ordering in case HTML has logo first */
+.header-content h1 {
+    order: 1;
+}
+.header-logo {
+    order: 2;
+}
+
 .header-content h1 {
     flex: 1 1 auto;
     min-width: 0;
+    order: 1; /* ensure it stays above logo */
 }
 
 .header-logo {
     display: block;
     max-width: 120px;
     height: auto;
+    margin-top: 15px; /* spacing below title */
+    order: 2; /* placed after title */
 }
 
 @media (max-width: 480px) {
     .header-logo {
         max-width: 50px;
+        margin-top: 10px;
     }
-    /* keep header-content horizontal on phones and maintain gap */
+    /* stack title and logo vertically on phones */
     .header-content {
         gap: 12px;
-        transform: scale(0.7);
-        transform-origin: center center;
-        flex-wrap: nowrap;
+        flex-direction: column;
     }
     .header h1 {
         font-size: 0.6rem; /* really tiny to force three lines */
@@ -80,8 +91,9 @@ body {
 }
 
 @media (max-width: 360px) {
+    /* small phones keep the same column layout */
     .header-content {
-        transform: scale(0.75);
+        gap: 10px;
     }
 }
 .header .subtitle {
@@ -338,6 +350,10 @@ main {
 }
 
 @media (max-width: 480px) {
+    body {
+        font-size: 0.9rem; /* slightly smaller overall */
+    }
+
     .header {
         padding: 40px 15px;
     }
@@ -352,18 +368,18 @@ main {
     }
 
     .header .subtitle {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         margin-top: 8px;
     }
 
     .section-title {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         margin-bottom: 20px;
         word-break: break-word;
     }
 
     .program-title {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-top: 30px;
         margin-bottom: 15px;
     }
@@ -381,12 +397,12 @@ main {
     }
 
     .doc-card h3 {
-        font-size: 1rem;
+        font-size: 0.95rem;
         margin-bottom: 8px;
     }
 
     .doc-card p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         margin-bottom: 12px;
     }
 
@@ -396,6 +412,15 @@ main {
         border-left: none;
         border-radius: 5px;
         background-color: #fafafa;
+    }
+
+    .btn, .btn-upload-header {
+        font-size: 0.8rem;
+    }
+
+    .jump-dropdown,
+    .pedoman-dropdown {
+        font-size: 0.9rem;
     }
 
     .container {
@@ -415,6 +440,10 @@ main {
 
 /* extra adjustments for very small phones */
 @media (max-width: 360px) {
+    body {
+        font-size: 0.85rem;
+    }
+
     .category-grid {
         gap: 10px;
     }
@@ -424,31 +453,40 @@ main {
     }
 
     .doc-card h3 {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .doc-card p {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         margin-bottom: 8px;
     }
 
     .btn, .btn-upload-header {
         padding: 8px 14px;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         min-height: 36px;
     }
 
     .header h1 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .header .subtitle {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 
     .section-title {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-bottom: 15px;
+    }
+
+    .program-title {
+        font-size: 0.9rem;
+    }
+
+    .jump-dropdown,
+    .pedoman-dropdown {
+        font-size: 0.85rem;
     }
 
     .container {
