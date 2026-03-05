@@ -73,7 +73,7 @@ body {
 
 @media (max-width: 480px) {
     .header-logo {
-        max-width: 50px;
+        max-width: 70px; /* larger logo on phones */
         margin-top: 10px;
     }
     /* stack title and logo vertically on phones */
